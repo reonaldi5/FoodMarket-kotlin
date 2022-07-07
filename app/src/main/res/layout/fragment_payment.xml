@@ -66,10 +66,10 @@
             <TextView
                 android:id="@+id/tvAdmin"
                 style="@style/TextView.PoppinsNormal14sp8D92A3"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
                 android:text="Biaya Admin"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvNameItem" />
@@ -77,16 +77,40 @@
 
             <TextView
                 android:id="@+id/textView12"
+                style="@style/TextView.PoppinsNormal14sp8D92A3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Price"
-                style="@style/TextView.PoppinsNormal14sp8D92A3"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
+                android:text="Total Price"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvAdmin" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/TextView.PoppinsNormal14sp8D92A3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Alamat Tahu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_alamat_tahu"
+                style="@style/TextView.PoppinsNormal14sp202020"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/alamat_tahu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
 
             <TextView
                 android:id="@+id/tvTitle"
@@ -148,7 +172,7 @@
                 style="@style/TextView.PoppinsNormal14sp1ABC9C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:text="IDR 18.000"
                 app:layout_constraintEnd_toEndOf="parent"

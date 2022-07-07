@@ -70,19 +70,19 @@ class OrdersDetailFragment : Fragment(), OrdersDetailContract.View {
 
             tvOrderStatus.text = it.id.toString()
 
-            if (data.status.equals("ON_DELIVERY", true)) {
+            if (data.status.equals("belum_dibayar", true)) {
                 btnCancelled.visibility = View.VISIBLE
                 constraintLayout3.visibility = View.VISIBLE
-                tvPending.text = "Paid"
-            } else if (it.status.equals("SUCCESS", true)) {
+                tvPending.text = "Menunggu Konfirmasi Admin"
+            } else if (it.status.equals("sudah_dibayar", true)) {
                 btnCancelled.visibility = View.INVISIBLE
                 constraintLayout3.visibility = View.VISIBLE
                 tvPending.text = "Paid"
-            } else if (it.status.equals("PENDING", true)) {
+            } else if (it.status.equals("sedang_perjalanan", true)) {
                 btnCancelled.visibility = View.VISIBLE
                 btnCancelled.text = "Pay Now"
                 constraintLayout3.visibility = View.VISIBLE
-                tvPending.text = "Pending"
+                tvPending.text = "Sedang Perjalanan"
             }
 
             btnCancelled.setOnClickListener {

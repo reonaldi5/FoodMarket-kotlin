@@ -14,6 +14,7 @@ import com.bagicode.foodmarketkotlin.R
 import com.bagicode.foodmarketkotlin.model.dummy.ProfileMenuModel
 import com.bagicode.foodmarketkotlin.ui.auth.AuthActivity
 import com.bagicode.foodmarketkotlin.ui.profile.ProfileMenuAdapter
+import com.readystatesoftware.chuck.internal.ui.MainActivity
 import kotlinx.android.synthetic.main.fragment_profile_account.*
 
 class ProfileAccountFragment : Fragment(), ProfileMenuAdapter.ItemAdapterCallback {
@@ -48,14 +49,20 @@ class ProfileAccountFragment : Fragment(), ProfileMenuAdapter.ItemAdapterCallbac
 
     fun initDataDummy() {
         menuArrayList = ArrayList()
-        menuArrayList.add(ProfileMenuModel("Edit Profile"))
+        menuArrayList.add(ProfileMenuModel("Log Out"))
 
     }
 
     override fun onClick(v: View, data: ProfileMenuModel) {
-//        btnEdit.setOnClickListener {
-//            Navigation.findNavController(it).navigate(R.id.fmEditProfile, bundle)
-//        }
+
+//        val home = Intent(activity, EditProfileActivity::class.java)
+//        startActivity(home)
+//        activity?.finishAffinity()
+
+        Navigation.findNavController(v)
+            .navigate(R.id.fragmentSignIn, null)
+        (activity as AuthActivity).toolbarSignUp()
+        
     }
 
 

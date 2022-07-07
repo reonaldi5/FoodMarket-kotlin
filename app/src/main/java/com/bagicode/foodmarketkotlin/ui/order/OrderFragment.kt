@@ -61,10 +61,12 @@ class OrderFragment : Fragment(), OrderContract.View {
         } else {
 
             for (a in transactionResponse.data.indices) {
-                if (transactionResponse.data[a].status.equals("ON_DELIVERY", true)
-                    || transactionResponse.data[a].status.equals("PENDING", true)) {
+                if (transactionResponse.data[a].status.equals("belum_dibayar", true)
+                    || transactionResponse.data[a].status.equals("PENDING", true)
+                        || transactionResponse.data[a].status.equals("sudah_dibayar", true)
+                        ||transactionResponse.data[a].status.equals("sedang_perjalanan", true)) {
                     inprogressList?.add(transactionResponse.data[a])
-                } else if (transactionResponse.data[a].status.equals("DELIVERED", true)
+                } else if (transactionResponse.data[a].status.equals("sudah_tiba", true)
                     || transactionResponse.data[a].status.equals("CANCELLED", true)
                     || transactionResponse.data[a].status.equals("SUCCESS", true)) {
                     pastordersList?.add(transactionResponse.data[a])

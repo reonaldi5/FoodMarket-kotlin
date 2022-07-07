@@ -40,10 +40,10 @@ data class User(
     val phoneNumber: String,
         @Expose
     @SerializedName("profile_photo_path")
-    val profile_photo_path: String,
+    val profile_photo_path: String?,
         @Expose
     @SerializedName("profile_photo_url")
-    val profile_photo_url: String,
+    val profile_photo_url: String?,
         @Expose
     @SerializedName("roles")
     val roles: String,

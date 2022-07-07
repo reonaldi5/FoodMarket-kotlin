@@ -9,6 +9,8 @@
         android:id="@+id/fragmentDetailOrders"
         android:name ="com.bagicode.foodmarketkotlin.ui.profile.editprofile.EditProfileFragment"
         tools:layout="@layout/fragment_edit_profile">
+
+
     </fragment>
 
 </navigation>

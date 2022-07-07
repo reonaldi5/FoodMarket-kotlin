@@ -49,7 +49,7 @@ class SignupFragment : Fragment() {
 
             var fullname = etFullname.text.toString()
             var email = etEmail.text.toString()
-            var pass = etPassword.text.toString()
+            var pass = etPassword.text.toString().trim()
 
             if (fullname.isNullOrEmpty()) {
                 etFullname.error = "Silahkan masukkan fullname"

@@ -16,6 +16,7 @@ interface Endpoint {
     fun login(@Field("email") email:String,
               @Field("password") password:String) : Observable<Wrapper<LoginResponse>>
 
+    @Headers("Accept: application/json")
     @FormUrlEncoded
     @POST("register")
     fun register(@Field("name") name:String,
@@ -32,6 +33,7 @@ interface Endpoint {
     fun edit(@Field("name") name:String,
                  @Field("email") email:String) : Observable<Wrapper<LoginResponse>>
 
+    @Headers("Accept: application/json")
     @Multipart
     @POST("user/photo")
     fun registerPhoto(@Part profileImage:MultipartBody.Part) : Observable<Wrapper<Any>>
@@ -39,6 +41,7 @@ interface Endpoint {
     @GET("produk")
     fun home() : Observable<Wrapper<HomeResponse>>
 
+    @Headers("Accept: application/json")
     @FormUrlEncoded
     @POST("checkout")
     fun checkout(@Field("food_id") food_id:String,
@@ -54,5 +57,10 @@ interface Endpoint {
     @POST("transaction/{id}")
     fun transactionUpdate(@Path(value = "id") userId:String,
                           @Field("status") status: String): Observable<Wrapper<Any>>
+
+    @Headers("Accept: application/json")
+    @FormUrlEncoded
+    @POST("logout")
+    fun logout() : Observable<Wrapper<LoginResponse>>
 
 }

@@ -7,7 +7,11 @@
     android:orientation="vertical"
     tools:context=".ui.detail.DetailActivity">
 
-
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <fragment
         android:id="@+id/editprofilehostfragment"
@@ -15,6 +19,6 @@
         android:layout_height="match_parent"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
-        app:navGraph=""/>
+        app:navGraph="@navigation/nav_edit_profile"/>
 
 </LinearLayout>

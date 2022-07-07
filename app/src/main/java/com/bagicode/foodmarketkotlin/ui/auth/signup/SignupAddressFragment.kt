@@ -1,6 +1,7 @@
 package com.bagicode.foodmarketkotlin.ui.auth.signup
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,6 +16,7 @@ import com.bagicode.foodmarketkotlin.model.request.RegisterRequest
 import com.bagicode.foodmarketkotlin.model.response.login.LoginResponse
 import com.bagicode.foodmarketkotlin.ui.auth.AuthActivity
 import com.google.gson.Gson
+import com.readystatesoftware.chuck.internal.ui.MainActivity
 import kotlinx.android.synthetic.main.fragment_signup_address.*
 
 class SignupAddressFragment : Fragment(), SignupContract.View {
@@ -104,9 +106,12 @@ class SignupAddressFragment : Fragment(), SignupContract.View {
     }
 
     override fun onRegisterPhotoSuccess(view: View) {
-        Navigation.findNavController(view)
-            .navigate(R.id.action_signup_success, null)
-        (activity as AuthActivity).toolbarSignUpSuccess()
+//        Navigation.findNavController(view)
+//            .navigate(R.id.action_signup_success, null)
+//        (activity as AuthActivity).toolbarSignUpSuccess()
+        val home = Intent(activity, MainActivity::class.java)
+        startActivity(home)
+        activity?.finishAffinity()
     }
 
     override fun onRegisterFailed(message: String) {

@@ -67,7 +67,7 @@ class PaymentFragment : Fragment() , PaymentContract.View{
         tvNameItem.text = data?.name
         tvHarga.formatPrice(data?.price.toString())
 
-        tvPrice.text = "IDR. 0"
+//        tvPrice.text = "IDR. 0"
         tvTotal.text = "IDR. 0"
         total = 0
 

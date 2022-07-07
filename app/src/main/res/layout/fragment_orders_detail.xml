@@ -108,16 +108,13 @@
                 app:layout_constraintTop_toTopOf="@+id/tvNameItem" />
 
 
-
-
-
             <TextView
                 android:id="@+id/textView18"
                 style="@style/TextView.PoppinsNormal14sp8D92A3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginBottom="16dp"
                 android:text="Total Price"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -125,11 +122,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvNameItem" />
 
             <TextView
+                android:id="@+id/textView19"
+                style="@style/TextView.PoppinsNormal14sp8D92A3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="Alamat Tahu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_alamat_tahu"
+                style="@style/TextView.PoppinsNormal14sp020202"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/alamat_tahu"
+                android:lineSpacingMultiplier="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTotal" />
+
+            <TextView
                 android:id="@+id/tvTotal"
                 style="@style/TextView.PoppinsNormal14sp1ABC9C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="IDR 390.803.000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -336,8 +357,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-            android:visibility="gone"
-            tools:visibility="visible"/>
+            android:visibility="invisible"
+            tools:visibility="invisible"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

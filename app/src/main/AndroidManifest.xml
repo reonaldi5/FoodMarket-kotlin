@@ -11,14 +11,13 @@
     <application
         android:name=".FoodMarket"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_tahu_foreground"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.noActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.profile.editprofile.EditProfileActivity"></activity>
         <activity android:name=".ui.order.detailsorders.OrdersDetailActivity" />
         <activity android:name=".ui.detail.DetailActivity" />
         <activity android:name=".ui.MainActivity" />

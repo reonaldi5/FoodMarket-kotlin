@@ -7,4 +7,8 @@
     <string name="title_dashboard">Order</string>
     <string name="title_notifications">Profile</string>
     <string name="ini_adalah_icon_ok">ini adalah icon ok</string>
+    <string name="alamat_tahu">Jl K. H. Hasyim Asy’ari\n
+        Gang Kemuning Rt 01 / Rw 05 No. 27,\n
+        Sudimara Pinang, Pinang,
+        \nTangerang 15145</string>
 </resources>

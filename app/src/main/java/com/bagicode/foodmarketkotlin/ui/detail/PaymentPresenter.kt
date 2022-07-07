@@ -16,11 +16,11 @@ class PaymentPresenter (private val view:PaymentContract.View) : PaymentContract
     override fun getCheckout(foodId:String, userId:String, quantity:String, total:String, viewParms: View) {
         view.showLoading()
         val disposable = HttpClient.getInstance().getApi()!!.checkout(
-            foodId,
+                foodId,
             userId,
             quantity,
             total,
-            "ON_DELIVERY"
+            "belum_dibayar"
         )
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())

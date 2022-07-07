@@ -83,10 +83,7 @@ class SigninFragment : Fragment(), SigninContract.View {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun initDummy() {
-        etEmail.setText("jennie.kim@blackpink.com")
-        etPassword.setText("12345678")
-    }
+
 
     private fun initView() {
         progressDialog = Dialog(requireContext())

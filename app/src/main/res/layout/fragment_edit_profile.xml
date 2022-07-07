@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/etEm"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:layout_marginTop="100dp"
         android:padding="10dp"
         style="@style/EditText.PoppinsNormal14sp8D92A3"

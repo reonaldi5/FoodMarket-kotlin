@@ -70,9 +70,9 @@ class HomeFragment : Fragment(),HomeAdapter.ItemAdapterCallback, HomeContract.Vi
         var user = FoodMarket.getApp().getUser()
         var userResponse = Gson().fromJson(user, User::class.java)
 
-        if (!userResponse.profile_photo_url.isNullOrEmpty()) {
+        if (!userResponse?.profile_photo_url.isNullOrEmpty()) {
             Glide.with(requireActivity())
-                .load(userResponse.profile_photo_url)
+                .load(userResponse?.profile_photo_url)
                 .apply(RequestOptions.circleCropTransform())
                 .into(ivProfil)
         }

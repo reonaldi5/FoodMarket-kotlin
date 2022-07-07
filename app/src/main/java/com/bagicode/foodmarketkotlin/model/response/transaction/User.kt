@@ -16,7 +16,7 @@ data class User(
     val city: String,
     @Expose
     @SerializedName("created_at")
-    val createdAt: Long,
+    val createdAt: Long?,
     @Expose
     @SerializedName("current_team_id")
     val currentTeamId: String?,
